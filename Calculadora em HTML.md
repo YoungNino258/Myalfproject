@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+</head>
+<body>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+</head>
+<body>
+	<input type="text" id="resultado">
+	<br>
+	<button onclick="adicionarNumero(1)">1</button>
+	<button onclick="adicionarNumero(2)">2</button>
+	<button onclick="adicionarNumero(3)">3</button>
+	<button onclick="adicionarOperacao('+')">+</button>
+	<br>
+	<button onclick="adicionarNumero(4)">4</button>
+	<button onclick="adicionarNumero(5)">5</button>
+	<button onclick="adicionarNumero(6)">6</button>
+	<button onclick="adicionarOperacao('-')">-</button>
+	<br>
+	<button onclick="adicionarNumero(7)">7</button>
+	<button onclick="adicionarNumero(8)">8</button>
+	<button onclick="adicionarNumero(9)">9</button>
+	<button onclick="adicionarOperacao('')"></button>
+	<br>
+	<button onclick="adicionarNumero(0)">0</button>
+	<button onclick="adicionarOperacao('/')">/</button>
+	<button onclick="limpar()">C</button>
+	<button onclick="calcular()">=</button>
+	<br>
+
+	<script>
+		function adicionarNumero(numero) {
+			document.getElementById('resultado').value += numero;
+		}
+
+		function adicionarOperacao(operacao) {
+			document.getElementById('resultado').value += operacao;
+		}
+
+		function limpar() {
+			document.getElementById('resultado').value = '';
+		}
+
+		function calcular() {
+			var resultado = eval(document.getElementById('resultado').value);
+			document.getElementById('resultado').value = resultado;
+		}
+	</script>
+</body>
+</html>
+<script>
+	function adicionarNumero(numero) {
+		document.getElementById('resultado').value += numero;
+	}
+
+	function adicionarOperacao(operacao) {
+		document.getElementById('resultado').value += operacao;
+	}
+
+	function limpar() {
+		document.getElementById('resultado').value = '';
+	}
+
+	function calcular() {
+		var resultado = eval(document.getElementById('resultado').value);
+		document.getElementById('resultado').value = resultado;
+	}
+</script>
